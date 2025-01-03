@@ -86,7 +86,32 @@ main {
     font-size: larger;
     line-height: 40px;
 }
-
+/* page : educations */
+.educations {
+    background-image: url(/img/bg-education.png);
+    background-size: 70%; /* Makes the background 70% of its original size */
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    position: relative;
+}
+.educations h1 {
+    color: red;
+}
+.educations ul {
+    list-style: none; /* Remove default bullets */
+    padding: 0;
+    margin: 0;
+    line-height: 1.8em;
+} 
+.educations ul li {
+    background-image: url(/img/star.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding-left: 25px; /* Adjust to give space for the custom bullet */
+    background-size: 16px 16px; /* Resize the image */
+}
+  
 /* footer */
 footer {
     display: flex;

@@ -52,11 +52,22 @@ function changeContent(page) {
 
         case 'educations':
             contentDiv.innerHTML = `
-                <h1>My Education</h1>
-                <ul>
-                    <li>Studied SFI in Sweden</li>
-                    <li>Explored Frontend Development</li>
-                </ul>
+                <div class="educations">
+                    <h1> My Education </h1>
+                    <ul>
+                        <li> 2024 - FrontEnd Developer : NBI Handelsakademin Göteborg </li>
+                        <li> 2024 - Svenska som andraspråk 2 (Swedish as a Second Language 2) : Hermods Göteborg </li>
+                        <li> 2024 - Programmering 1 : Handelsakademin Göteborg </li>
+                        <li> 2024 - Programmering 1 : Hermods Göteborg </li>
+                        <li> 2022 - Förskoleassistent / Barnskötarutbildning (Preschool / Nursery Assistant): Komvux i Alafors, Ale kommun </li>
+                        <li> 2021 - Svenska som andraspråk 1 (Swedish as a Second Language 1) : Hermods Göteborg </li>
+                        <li> 2021 - Arbetsliv for Pedagoger (Work Life for Educators) : Hermods Göteborg </li>
+                        <li> 2019 - Talang Barnomsorg / Barnskötare (Talent Nursery / Nursery Assistant) : Hermods Göteborg </li>
+                        <li> 2018 - Svenska för invandrare (SFI) (Swedish for Immigrants (SFI)) : Hermods Göteborg </li>
+                        <li> 2006 - Bachelor of Arts (BA) English Language and Literature : Naresuan University Thailand </li>
+                        <li> 2000 - Business computer - High Vocational Certificate Program : Northeastern Technological College Thailand </li>
+                    </ul>
+                </div>
             `;
             break;
 

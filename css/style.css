@@ -68,7 +68,7 @@ main {
     justify-content: center;
     align-items: center;
 }
-.myName {
+.myName, .education h1, .skills h1 {
     color: red;
 }
 .welcome-img img {
@@ -86,8 +86,8 @@ main {
     font-size: larger;
     line-height: 40px;
 }
-/* page : educations */
-.educations {
+/* page : education */
+.education {
     background-image: url(/img/bg-education.png);
     background-size: 70%; /* Makes the background 70% of its original size */
     background-repeat: no-repeat;
@@ -95,23 +95,41 @@ main {
     height: 100vh;
     position: relative;
 }
-.educations h1 {
-    color: red;
-}
-.educations ul {
+.education ul, .work ul, .skills ul {
     list-style: none; /* Remove default bullets */
     padding: 0;
     margin: 0;
     line-height: 1.8em;
 } 
-.educations ul li {
+.education ul li, .skills ul li, .work ul li {
     background-image: url(/img/star.png);
     background-repeat: no-repeat;
     background-position: left center;
     padding-left: 25px; /* Adjust to give space for the custom bullet */
     background-size: 16px 16px; /* Resize the image */
 }
-  
+/* Page : Work Experience */
+.work {
+    display: flex;
+    flex-direction: row;
+}
+.work-header {
+    margin: 10px;
+    padding: 10px;
+    color: red;
+    justify-content: center;
+}
+.work-header img {
+    width: 300px;
+    height: 300px;
+}
+/* Page : skills */
+.skills img {
+    width: 300px;
+    height: 150px;
+}
+
+
 /* footer */
 footer {
     display: flex;

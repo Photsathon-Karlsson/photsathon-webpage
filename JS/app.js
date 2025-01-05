@@ -50,9 +50,9 @@ function changeContent(page) {
             `;
             break;
 
-        case 'educations':
+        case 'education':
             contentDiv.innerHTML = `
-                <div class="educations">
+                <div class="education">
                     <h1> My Education </h1>
                     <ul>
                         <li> 2024 - FrontEnd Developer : NBI Handelsakademin Göteborg </li>
@@ -73,18 +73,71 @@ function changeContent(page) {
 
         case 'work':
             contentDiv.innerHTML = `
-                <h1>Work Experiences</h1>
-                <p>I worked as a preschool assistant, learning to work with children.</p>
+                <div class="work">
+                    <div class="work-header">
+                        <h1> My Work Experience </h1>
+                        <img src="img/bg-work.png" alt="work-img">
+                    </div>
+                    <div class="work-details">
+                        <ul>
+                            <li> 2021-2023 : Barnskötare / Förskoleassistent (Preschool / Nursery Assistant) - Ale Kommun </li>
+                            <li> 2019-2021 : Barnskötare / Förskoleassistent (Preschool / Nursery Assistant) - Göteborg Stad </li>
+                            <li> 2019-2020 : Housekeeper - Radisson Blu Hotel - Göteborg Stad </li>
+                            <li> 2019-2019 : Praktik som barnskötare (Internship as a nursery assistant) - Skånegatan förskola, Göteborg Stad </li>
+                            <li> 2010-2017 : Volunteering as a teaching assistant - Thailand </li>
+                            <li> 2015-2015 : Administrator - Headstart international school, Phuket, Thailand </li>
+                            <li> 2013-2015 : Thai Teacher for immigrants - The Genius Language school, Phuket, Thailand </li>
+                            <li> 2014-2015 : Dog Care Assistant - Phuket Dogs Resort, Phuket, Thailand </li>
+                            <li> 2013-2013 : Cashier & Waitress - Kata Cuit restaurang, Phuket, Thailand</li>
+                            <li> 2011-2012 : Teacher Assistant (English Program) - Anuban Khonkaen School, Khonkaen, Thailand </li>
+                            <li> 2010-2011 : Teacher Assistant - Paiboon Wittaya School, Khonkaen, Thailand </li>
+                            <li> 2010-2010 : Teacher Smart English for kids, Khonkaen, Thailand </li>
+                            <li> 2009-2009 : Tour guide (Internship) - Kanchanaburi, Thailand </li>
+                            <li> 2006-2009 : Seller - Payao, Thailand </li>
+                            <li> 2004-2005 : Cashier & Waitress - Kiwi Café, Khonkaen, Thailand </li>
+                        </ul>
+                    </div>                   
+                </div>
             `;
             break;
 
         case 'skills':
             contentDiv.innerHTML = `
-                <h1>My Skills</h1>
-                <ul>
-                    <li>HTML, CSS, JavaScript</li>
-                    <li>Web design and coding</li>
-                </ul>
+                <div class="skills">
+                <img src="img/skills.jpg" alt="skills-img">
+                    <h1> Languages & Communication </h1>
+                        <ul>
+                            <li> Thai / English / Swedish </li>
+                            <li> Skilled in teaching English and Thai to children and immigrants. </li>
+                            <li> Strong communication and adaptability in diverse environments. </li>
+                        </ul>
+                    <h1> Technology & Programming </h1>
+                        <ul>
+                            <li> Learning Frontend Development and Programming (2024). </li>
+                            <li> Skilled in business computer applications. </li>
+                        </ul>
+                    <h1> Childcare & Education </h1>
+                        <ul>
+                            <li> 4+ years as a Preschool/Nursery Assistant in Sweden and 7+ years of experience in childcare and teaching assistance in Thailand </li>
+                            <li> Trained in child development and engaging activities for young learners. </li>
+                            <li> Experienced in teamwork with parents and educators. </li>
+                        </ul>
+                    <h1> Administration & Organization </h1>
+                        <ul>
+                            <li> Administrative experience in schools, including scheduling and record-keeping. </li>
+                            <li> Strong organizational skills in fast-paced environments. </li>
+                        </ul>
+                    <h1> Customer Service & Hospitality </h1>
+                        <ul>
+                            <li> Experience as a cashier, waitress, and housekeeper. </li>
+                            <li> Excellent interpersonal and customer service skills. </li>
+                        </ul>
+                    <h1> Other Skills </h1>
+                        <ul>
+                            <li> Animal care experience at Phuket Dogs Resort. </li>
+                            <li> Tourism and sales experience, including as a guide and seller. </li>
+                        </ul>
+                </div>
             `;
             break;
 

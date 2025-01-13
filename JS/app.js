@@ -27,7 +27,7 @@ function changeContent(page) {
                     <h4> with a background in working as a preschool assistant. </h4>
                 </div>
                 <div class="welcome-img">
-                    <img src="img/profile.jpg" alt="profile">
+                    <img src="img/profile.png" alt="profile">
                 </div>
             `;
             break;
@@ -53,7 +53,7 @@ function changeContent(page) {
         case 'education':
             contentDiv.innerHTML = `
                 <div class="education">
-                    <h1> My Education </h1>
+                    <h1><img src="img/bg-education.png" alt="bg-education"> My Education </h1>
                     <ul>
                         <li> 2024 - FrontEnd Developer : NBI Handelsakademin Göteborg </li>
                         <li> 2024 - Svenska som andraspråk 2 (Swedish as a Second Language 2) : Hermods Göteborg </li>
@@ -104,7 +104,7 @@ function changeContent(page) {
         case 'skills':
             contentDiv.innerHTML = `
                 <div class="skills">
-                <img src="img/skills.jpg" alt="skills-img">
+                    <h1> [ S K I L L S ] </h1>
                     <h1> Languages & Communication </h1>
                         <ul>
                             <li> Thai / English / Swedish </li>
@@ -118,7 +118,8 @@ function changeContent(page) {
                         </ul>
                     <h1> Childcare & Education </h1>
                         <ul>
-                            <li> 4+ years as a Preschool/Nursery Assistant in Sweden and 7+ years of experience in childcare and teaching assistance in Thailand </li>
+                            <li> 4+ years as a Preschool/Nursery Assistant in Sweden. </li>
+                            <li> 7+ years of experience in childcare and teaching assistance in Thailand. </li>
                             <li> Trained in child development and engaging activities for young learners. </li>
                             <li> Experienced in teamwork with parents and educators. </li>
                         </ul>

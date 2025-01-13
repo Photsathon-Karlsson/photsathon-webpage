@@ -1,20 +1,34 @@
-// รอให้ DOM โหลดก่อนทำงาน
+// wait for DOM load.
 document.addEventListener("DOMContentLoaded", () => {
-    const links = document.querySelectorAll('nav a'); // เลือก <a> ทั้งหมดใน <nav>
+    const links = document.querySelectorAll('nav a'); // Choose <a> all in <nav>
 
-    // เพิ่ม Event Listener ให้แต่ละลิงก์
+    // Add Event Listener for each link.
     links.forEach(link => {
         link.addEventListener('click', (event) => {
-            event.preventDefault(); // ป้องกันการเปลี่ยนหน้า
-            const page = link.dataset.page; // อ่านค่าของ data-page
-            changeContent(page); // เรียกฟังก์ชัน changeContent พร้อมกับค่าของหน้า
+            event.preventDefault(); // Protecting changing pages. 
+            const page = link.dataset.page; // Read data-page.
+            changeContent(page); // Call function "changeContent".
         });
     });
 });
 
-// ฟังก์ชันเปลี่ยนเนื้อหา
+// Function to control video.
+document.addEventListener("DOMContentLoaded", () => {
+    const videoElement = document.querySelector(".welcome-video video");  // Choose video.
+    // Play video when click the button. 
+    document.getElementById("playVideo").addEventListener("click", () => {
+        videoElement.play();
+    });
+    // Stop video when click the button.
+    document.getElementById("stopVideo").addEventListener("click", () => {
+        videoElement.pause();
+    });
+});
+
+
+// Function for changing pages.
 function changeContent(page) {
-    const contentDiv = document.getElementById('content'); // อ้างถึง div แสดงเนื้อหา
+    const contentDiv = document.getElementById('content'); // div for showing the content.
 
     switch (page) {
 

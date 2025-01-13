@@ -10,9 +10,15 @@
 <body>
     <div id="app">  
         <!-- Header -->
-        <header>
-            <img src="img/header.jpg" alt="header">         
-        </header>
+        <div class="welcome-video">
+            <video autoplay muted loop>
+                <source src="img/welcome.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="video-controls">
+            <button id="playVideo">Play</button>
+            <button id="stopVideo">Stop</button>
+        </div>    
         <!-- NAV -->
         <nav>
             <ul>
@@ -40,22 +46,18 @@
         </div>
         <!-- Social media -->
         <div class="socialMedia">
-            <!-- Linkedin -->
-            <h1>            
-            <a class="linkedin" href="https://www.linkedin.com/in/photsathon-karlsson-50755617a/"><img class="logo-socialMedia" src="img/logo-linkedin.png" alt="linkedin"></a>
-            Linkedin</h1> 
-            <!-- Facebook -->
-            <h1>
-            <a class="facebook" href="https://www.facebook.com/photsathon.sangsukwaw"> <img class="logo-socialMedia" src="img/logo-facebook.png" alt="facebook"></a>
-            Facebook</h1>
-            <!-- Instagram -->
-            <h1>
-            <a class="instagram" href="https://www.instagram.com/photsathon_koi/"> <img class="logo-socialMedia" src="img/logo-instagram.png" alt="instagram"></a>
-            Instagram</h1>
-            <!-- GitHub -->
-            <h1>
-            <a class="github" href="https://github.com/Photsathon-Karlsson"> <img class="logo-socialMedia" src="img/logo-github.png" alt="github"></a>
-            GitHub</h1>
+            <div class="socialMedia-column">
+                <!-- Linkedin -->
+                <h1><a class="linkedin" href="https://www.linkedin.com/in/photsathon-karlsson-50755617a/"><img class="logo-socialMedia" src="img/logo-linkedin.png" alt="linkedin"></a>Linkedin</h1> 
+                <!-- Facebook -->
+                <h1><a class="facebook" href="https://www.facebook.com/photsathon.sangsukwaw"> <img class="logo-socialMedia" src="img/logo-facebook.png" alt="facebook"></a>Facebook</h1>
+            </div>
+            <div class="socialMedia-column">
+                <!-- Instagram -->
+                <h1><a class="instagram" href="https://www.instagram.com/photsathon_koi/"> <img class="logo-socialMedia" src="img/logo-instagram.png" alt="instagram"></a>Instagram</h1>
+                <!-- GitHub -->
+                <h1><a class="github" href="https://github.com/Photsathon-Karlsson"> <img class="logo-socialMedia" src="img/logo-github.png" alt="github"></a>GitHub</h1>
+            </div>
         </div>
     </footer> 
 </body>

@@ -61,11 +61,11 @@ header img {
 .video-controls button {
     padding: 10px 20px;
     margin: 0; 
-    color: #DA0037;
-    border: solid 1px #DA0037;
-    border-radius: 5px;
+    color: #FF0080;
+    border: solid 1px #06D001;
+    border-radius: 10px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 20px;
     background-color: black;
 }
 .video-controls button:hover {
@@ -74,7 +74,7 @@ header img {
 
 /* nav */
 nav {
-	background-color: #DA0037;
+	background-color: #F9E400;
     font-weight: 500;
 }
 nav ul {
@@ -116,7 +116,7 @@ nav a:hover, #aboutMe-button:hover, footer img:hover {
 main {
 	flex: 1;
 	padding: 1em;
-    background-image: url(/img/bg-main.jpg);
+    /*background-image: url(/img/bg-main.jpg);*/
     background-size: 100%; 
     background-repeat: no-repeat;
     background-position: center;
@@ -127,39 +127,25 @@ main {
 #content {
 	max-width: 1200px;
 	margin: 0 auto;
-	background-color: rgba(255, 255, 255, 0.445); /* White with 80% opacity */
+	background-color: rgb(255, 255, 255);
 	padding: 20px;
-	border-radius: 10px;
+	border-radius: 20px;
 
-	/* Box shadow with transparency */
-    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, 
-                rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, 
-                rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, 
-                rgba(0, 0, 0, 0.06) 0px 2px 1px, 
-                rgba(0, 0, 0, 0.09) 0px 4px 2px, 
-                rgba(0, 0, 0, 0.09) 0px 8px 4px, 
-                rgba(0, 0, 0, 0.09) 0px 16px 8px, 
-                rgba(0, 0, 0, 0.09) 0px 32px 16px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
 }
-.myName, .education h1, .skills h1 {
-    color: #DA0037;
+.myName, .education h1, .skills h1, .work-header h1, .projects h1 {
+    color: #3330E4;
 }
 .welcome-img img {
     width: 500px;
     height: 500px;
     margin-bottom: 40px;
     padding: 10px;
-    border-radius: 30px;
-    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
-/* Page : home */
-.myName {
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.87); /* x-offset, y-offset, blur-radius, color */
-}
+
 /* page: about me */
 .aboutMe-img img {
     width: 300px;
@@ -173,13 +159,13 @@ main {
     border-radius: 20px;
 }
 /* page : education */
-.education ul, .work ul, .skills ul {
+.education ul, .work ul, .skills ul, .projects ul li, .lifestyle ul li {
     list-style: none; /* Remove default bullets */
     padding: 0;
     margin: 0;
     line-height: 1.8em;
 } 
-.education ul li, .skills ul li, .work ul li {
+.education ul li, .skills ul li, .work ul li, .projects ul li, .lifestyle ul li {
     background-image: url(/img/star.png);
     background-repeat: no-repeat;
     background-position: left center;
@@ -212,6 +198,101 @@ main {
     margin: 20px 0;
     padding: 10px 0;
     line-height: 10px;
+}
+/* Projects */
+.projects {
+    margin: 20px 0;
+    padding: 10px 0;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.projects-topic, h2 {
+    margin: 0.5em; 
+    color: #DA0037;
+}
+.projects-text {
+    margin: 0.5em;
+    text-align: center;
+}
+.gallery-item {
+    background-color: white;
+    border: 2px solid #ddd;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 3em;
+}
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+.gallery-item a {
+    display: block;
+    margin-top: 10px;
+    color: #059212;
+    text-decoration: none;
+    font-size: xxx-large;
+    text-align: end;
+    padding: 0.3em;
+}
+.gallery-item a:hover {
+    text-decoration: underline;
+}
+/* Page : lifestyle */
+.slider-container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    /*border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);*/
+}
+.slider {
+    display: flex;
+    white-space: nowrap;
+    transition: transform 0.5s ease-in-out;
+}
+.slide {
+    min-width: 100%;
+    transition: 0.5s;
+}
+.slide img {
+    width: 100%;
+    border-radius: 10px;
+}
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+}
+.prev { left: 10px; }
+.next { right: 10px; }
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.lifestyle-text {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    text-align: center;
+    color: #3330E4;
+}
+.lifestyle-textbox {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 /* footer */
@@ -278,74 +359,461 @@ footer h1 a {
 /* RESPONSIVE DESIGN */
 
 /* Small devices (320px to 600px) */
-@media (max-width: 600px) {
+@media screen and (max-width: 600px) {
+    /* Header adjustments */
+    header img {
+        padding: 5px;
+        margin: 5px;
+    }
+    /* Navigation adjustments */
     nav ul {
         flex-direction: column;
-        align-items: center;
+        padding: 5px;
+        margin: 5px;
     }
     nav a {
-        font-size: medium;
-        padding: 0.5em;
-    }
+        font-size: x-large;
+        padding: 0.3em;
+        margin: 0.3em;
+    } 
+    /* Content adjustments */
     #content {
         flex-direction: column;
         padding: 10px;
+    }
+    .welcome-text, .work-header h1 {
         text-align: center;
     }
-    .welcome-img img {
-        width: 200px;
+    .welcome-img img, .aboutMe-img img {
+        width: 100%;
         height: auto;
+        max-width: 300px;
+        margin-bottom: 20px;
     }
-    header img {
-        width: 100px;
-        height: 100px;
+    /* Education */
+    .education h1 {
+        text-align: center;
     }
-    footer img {
-        width: 40px;
-        height: 40px;
+    /* Work section */
+    .work {
+        flex-direction: column;
+    }
+    .work-header img {
+        width: 200px;
+        height: 200px;
+    }
+    /* Skills section */
+    .skills h1, h2 {
+        text-align: center;
+    }
+    .skills h2 {
+        font-size: large;
+    }
+    /* Projects section */
+    .projects {
+        gap: 10px;
+    }
+    /* Footer adjustments */
+    footer {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+    }
+    .logo-web img {
+        width: 250px;
+    }
+    .socialMedia {
+        flex-direction: column;
+        align-items: start;
+        margin-top: 20px;
+    } 
+    .socialMedia-column {
+        align-items: center;
+        margin-bottom: 15px;
+    }
+    /* Video controls */
+    .video-controls button {
+        padding: 5px 10px;
+        font-size: 16px;
+    }
+    /* Text sizing */
+    main {
+        font-size: large;
+    }
+    .aboutMe-text {
+        line-height: 30px;
+        padding: 15px;
+    }
+    .gallery-item a {
+        font-size: x-large;
     }
 }
 
 /* Medium devices (601px to 1024px) */
-@media (min-width: 601px) and (max-width: 1024px) {
+@media screen and (max-width: 1024px) and (min-width: 601px) {
+    /* Header adjustments */
+    header {
+        height: auto;
+    }   
+    header img {
+        width: 90%;
+        max-height: 150px;
+        object-fit: contain;
+    } 
+    /* Navigation adjustments */
     nav ul {
-        flex-direction: row;
-        justify-content: center;
         flex-wrap: wrap;
-    }
+        padding: 5px;
+        margin: 5px;
+    }  
     nav a {
-        font-size: large;
-    }
+        font-size: xx-large;
+        padding: 0.3em;
+    }   
+    /* Main content adjustments */
     #content {
-        flex-direction: row;
-        gap: 10px;
+        flex-direction: column;
+        padding: 15px;
     }
     .welcome-img img {
+        width: 350px;
+        height: 350px;
+        margin-bottom: 20px;
+    }  
+    .welcome-text, .education h1, .work-header, .skills h1, .skills h2 {
+        text-align: center;
+    } 
+    /* About me page */
+    .aboutMe-img img {
         width: 250px;
+        height: 400px;
+    }   
+    .aboutMe-text {
+        line-height: 40px;
+        padding: 20px;
+        margin: 15px;
+        text-align: center;
+    } 
+    /* Education page */
+    .education ul li, .work-details ul li, .skills ul li, .skills h2, .skills h1 {
+        margin-bottom: 1.5em;
     }
-    footer img {
-        width: 50px;
-        height: 50px;
+    .education img {
+        width: 160px;
+        height: 160px;
+    }  
+    /* Work Experience page */
+    .work {
+        flex-direction: column;
+    } 
+    .work-header img {
+        width: 250px;
+        height: 250px;
+    }  
+    /* Projects page */
+    .projects {
+        gap: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }   
+    .gallery-item {
+        width: 45%;
+    }   
+    .gallery-item a {
+        font-size: xx-large;
+    }  
+    .gallery-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        flex-direction: column; 
+    }  
+    /* Lifestyle page */
+    .slider-container {
+        width: 90%;
+    }   
+    .lifestyle-textbox {
+        flex-direction: column;
+    }   
+    /* Footer adjustments */
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }    
+    .logo-web img {
+        width: 350px;
+        max-height: 350px;
+        margin-bottom: 20px;
+    }   
+    .socialMedia {
+        flex-wrap: wrap;
+        justify-content: center;
+    }   
+    .socialMedia-column {
+        margin: 0 15px;
+        align-items: center;
+    } 
+    .logo-socialMedia {
+        width: 40px;
+        height: 40px;
+    }
+    .logo-socialMedia:hover {
+        width: 55px;
+        height: 55px;
+    }
+    footer h1 {
+        font-size: 22px;
+        justify-content: center;
     }
 }
 
 /* Large devices (1025px to 1800px) */
 @media (min-width: 1025px) and (max-width: 1800px) {
-    nav ul {
-        justify-content: space-around;
+    /* General adjustments for large devices */
+    * {
+        letter-spacing: 1.5px; 
     }
+    /* Header adjustments */
+    header img {
+        max-width: 80%; 
+    }
+    /* Video container adjustments */
+    .video-container {
+        position: relative;
+        width: 80%; 
+        max-width: 800px;
+        margin: 50px auto;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+    .video-controls button {
+        padding: 8px 16px; 
+        font-size: 18px; 
+    }
+    /* Navigation adjustments */
+    nav ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column; 
+        align-items: center; 
+        justify-content: center; 
+    }
+    nav li {
+        margin: 10px 0; 
+        text-align: center; 
+    }  
     nav a {
-        font-size: x-large;
+        text-decoration: none;
+        color: black;
+        padding: 10px 20px; 
+        display: block;
+        transition: background-color 0.3s, color 0.3s;
+        font-size: xxx-large;
+        background-color: transparent;
+        border-radius: 10px;
+    }    
+    nav a:hover {
+        background-color: #44444488;
+        color: white;
+        border-radius: 15px;
+        transform: scale(1.1);
+        cursor: pointer;
+    } 
+    nav h1 {
+        margin: 0; 
+    }
+    /* Main content adjustments */
+    main {
+        padding: 1.5em; 
+        font-size: x-large; 
     }
     #content {
-        padding: 20px;
-        gap: 20px;
+        padding: 30px; 
     }
     .welcome-img img {
-        width: 300px;
+        width: 400px; 
+        height: 400px;
     }
-    footer img {
-        width: 60px;
+    /* About Me adjustments */
+    .aboutMe-img img {
+        width: 250px; 
+        height: 400px;
+    }
+    .aboutMe-text {
+        line-height: 40px; 
+    }
+    /* Education adjustments */
+    .education img {
+        width: 180px; 
+        height: 180px;
+    }
+    /* Work Experience adjustments */
+    .work-header img {
+        width: 250px; 
+        height: 250px;
+    }
+    /* Skills adjustments */
+    .skills {
+        line-height: 1.2em; 
+    }
+    /* Projects adjustments */
+    .gallery-item {
+        padding: 15px; 
+    }
+    .gallery-item a {
+        font-size: x-large; 
+    }
+    /* Lifestyle adjustments */
+    .slider-container {
+        width: 90%; 
+    }
+    .prev, .next {
+        padding: 8px; 
+        font-size: 16px; 
+    }
+    /* Footer adjustments */
+    footer {
+        padding: 30px; 
+    }
+    .logo-web img {
+        width: 400px; 
+        height: 400px;
+    }
+    .logo-socialMedia {
+        width: 45px; 
+        height: 45px;
+    }
+    .logo-socialMedia:hover {
+        width: 60px; 
         height: 60px;
+    }
+    footer h1 {
+        font-size: 22px; 
+    }
+}
+
+/* Extra large devices (above 1800px) */
+@media (min-width: 1800px) {
+    /* Header */
+    header {
+        padding: 20px 0; 
+    }
+    header img {
+        max-width: 60%; 
+    }
+    /* Video section */
+    .video-container {
+        position: relative;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto;
+        border-radius: 10px;
+        overflow: hidden;
+        padding-bottom: 80px; 
+    } 
+    .video-controls {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 10px;
+    }
+    /* Navigation */
+    nav {
+        margin-top: 2em;
+    }
+    nav ul {
+        padding: 20px; 
+    }
+    nav a {
+        font-size: 2rem; 
+        padding: 0 1em; 
+    }
+    /* Main Content */
+    main {
+        padding: 2em; 
+        font-size: 2.5rem; 
+    }
+    #content {
+        max-width: 1600px; 
+        padding: 40px; 
+    }
+    .welcome-img img {
+        width: 700px; 
+        height: 700px;
+        margin-bottom: 60px;
+    }
+    /* About Me */
+    .aboutMe-img img {
+        width: 400px; 
+        height: 700px;
+    }
+    .aboutMe-text {
+        line-height: 60px; 
+        padding: 50px; 
+    }
+    /* Education, Skills, Work, Projects */
+    .education img {
+        width: 300px; 
+        height: 300px;
+    }
+    .work-details ul li {
+        margin-bottom: 1.5em;
+    }
+    .work-header img {
+        width: 400px; 
+        height: 400px;
+    }
+    .projects {
+        gap: 30px; 
+    }
+    .gallery-item {
+        padding: 20px; 
+    }
+    .gallery-item img {
+        max-height: 400px; 
+    }
+    .gallery-item a {
+        font-size: 4rem; 
+        padding: 0.5em;
+    }
+    /* Lifestyle Slider */
+    .slider-container {
+        width: 70%; 
+    }
+    .prev, .next {
+        padding: 15px 20px; 
+        font-size: 24px; 
+    }
+    /* Footer */
+    footer {
+        padding: 40px; 
+    }
+    .logo-web img {
+        width: 700px; 
+        height: 700px;
+    }
+    .socialMedia {
+        justify-content: space-evenly; 
+    }
+    .logo-socialMedia {
+        width: 70px; 
+        height: 70px;
+        margin-right: 20px;
+        padding: 15px;
+    }
+    .logo-socialMedia:hover {
+        width: 90px;
+        height: 90px;
+    }
+    footer h1 {
+        font-size: 36px; 
     }
 }

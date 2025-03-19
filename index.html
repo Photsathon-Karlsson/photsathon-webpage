@@ -10,15 +10,17 @@
 <body>
     <div id="app">  
         <!-- Header -->
-        <div class="welcome-video">
-            <video autoplay muted loop>
-                <source src="img/welcome.mp4" type="video/mp4">
-            </video>
-        </div>
-        <div class="video-controls">
-            <button id="playVideo">Play</button>
-            <button id="stopVideo">Stop</button>
-        </div>    
+        <div class="video-container">
+            <div class="welcome-video">
+                <video autoplay muted loop>
+                    <source src="img/welcome.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="video-controls">
+                <button id="playVideo">Play</button>
+                <button id="stopVideo">Stop</button>
+            </div> 
+        </div>   
         <!-- NAV -->
         <nav>
             <ul>
@@ -27,7 +29,7 @@
                 <li><a href="#" data-page="education"> <h1>Education</h1> </a></li>
                 <li><a href="#" data-page="work"> <h1>Work Experience</h1> </a></li>
                 <li><a href="#" data-page="skills"> <h1>Skills</h1> </a></li>
-                <li><a href="#" data-page="family"> <h1>Family</h1> </a></li>
+                <li><a href="#" data-page="projects"> <h1>Projects</h1> </a></li>
                 <li><a href="#" data-page="lifestyle"> <h1>Lifestyle</h1> </a></li>
             </ul>
         </nav> 
@@ -57,6 +59,12 @@
                 <h1><a class="instagram" href="https://www.instagram.com/photsathon_koi/"> <img class="logo-socialMedia" src="img/logo-instagram.png" alt="instagram"></a>Instagram</h1>
                 <!-- GitHub -->
                 <h1><a class="github" href="https://github.com/Photsathon-Karlsson"> <img class="logo-socialMedia" src="img/logo-github.png" alt="github"></a>GitHub</h1>
+            </div>
+            <div class="cv">
+                <!-- cv-eng -->
+                <h1><a class="cv-eng" href="https://drive.google.com/file/d/1ZkUxg5ZqekY8u0-1Uslt1l3H7_H2OPV9/view?usp=sharing" target="_blank"> <img class="logo-socialMedia" src="img/cv.png" alt="cv"></a>Download CV : ENG</h1>
+                <!-- cv-sv -->
+                <h1><a class="cv-svb" href="https://drive.google.com/file/d/1MGo5hY_sqcyrDdf78H1-mLWFi_Bb8OVD/view?usp=sharing" target="_blank"> <img class="logo-socialMedia" src="img/cv.png" alt="cv"></a>Download CV : SV</h1>
             </div>
         </div>
     </footer> 

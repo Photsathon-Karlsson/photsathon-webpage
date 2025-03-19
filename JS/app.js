@@ -25,6 +25,29 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+// Function for slider gallery
+function updateSlider() {
+    let index = 0;
+    const slides = document.querySelectorAll('.slide');
+    const totalSlides = slides.length;
+    const slider = document.querySelector('.slider');
+
+    document.querySelector('.next').addEventListener('click', () => {
+        index = (index + 1) % totalSlides;
+        updateSlidePosition();
+    });
+
+    document.querySelector('.prev').addEventListener('click', () => {
+        index = (index - 1 + totalSlides) % totalSlides;
+        updateSlidePosition();
+    });
+
+    function updateSlidePosition() {
+        if (slider) {
+            slider.style.transform = `translateX(-${index * 100}%)`;
+        }
+    }
+}
 
 // Function for changing pages.
 function changeContent(page) {
@@ -67,7 +90,7 @@ function changeContent(page) {
         case 'education':
             contentDiv.innerHTML = `
                 <div class="education">
-                    <h1><img src="img/bg-education.png" alt="bg-education"> My Education </h1>
+                    <h1><img src="img/bg-education.png" alt="bg-education"><br>[ E d u c a t i o n ] </h1>
                     <ul>
                         <li> 2024 - FrontEnd Developer : NBI Handelsakademin Göteborg </li>
                         <li> 2024 - Svenska som andraspråk 2 (Swedish as a Second Language 2) : Hermods Göteborg </li>
@@ -89,7 +112,7 @@ function changeContent(page) {
             contentDiv.innerHTML = `
                 <div class="work">
                     <div class="work-header">
-                        <h1> My Work Experience </h1>
+                        <h1> [ W o r k <br> O v e r v i e w ] </h1>
                         <img src="img/bg-work.png" alt="work-img">
                     </div>
                     <div class="work-details">
@@ -119,35 +142,35 @@ function changeContent(page) {
             contentDiv.innerHTML = `
                 <div class="skills">
                     <h1> [ S K I L L S ] </h1>
-                    <h1> Languages & Communication </h1>
+                    <h2> Languages & Communication </h2>
                         <ul>
                             <li> Thai / English / Swedish </li>
                             <li> Skilled in teaching English and Thai to children and immigrants. </li>
                             <li> Strong communication and adaptability in diverse environments. </li>
                         </ul>
-                    <h1> Technology & Programming </h1>
+                    <h2> Technology & Programming </h2>
                         <ul>
                             <li> Learning Frontend Development and Programming (2024). </li>
                             <li> Skilled in business computer applications. </li>
                         </ul>
-                    <h1> Childcare & Education </h1>
+                    <h2> Childcare & Education </h2>
                         <ul>
                             <li> 4+ years as a Preschool/Nursery Assistant in Sweden. </li>
                             <li> 7+ years of experience in childcare and teaching assistance in Thailand. </li>
                             <li> Trained in child development and engaging activities for young learners. </li>
                             <li> Experienced in teamwork with parents and educators. </li>
                         </ul>
-                    <h1> Administration & Organization </h1>
+                    <h2> Administration & Organization </h2>
                         <ul>
                             <li> Administrative experience in schools, including scheduling and record-keeping. </li>
                             <li> Strong organizational skills in fast-paced environments. </li>
                         </ul>
-                    <h1> Customer Service & Hospitality </h1>
+                    <h2> Customer Service & Hospitality </h2>
                         <ul>
                             <li> Experience as a cashier, waitress, and housekeeper. </li>
                             <li> Excellent interpersonal and customer service skills. </li>
                         </ul>
-                    <h1> Other Skills </h1>
+                    <h2> Other Skills </h2>
                         <ul>
                             <li> Animal care experience at Phuket Dogs Resort. </li>
                             <li> Tourism and sales experience, including as a guide and seller. </li>
@@ -156,18 +179,82 @@ function changeContent(page) {
             `;
             break;
 
-        case 'family':
+        case 'projects':
             contentDiv.innerHTML = `
-                <h1>My Family</h1>
-                <p>I have a loving and supportive family who motivates me daily.</p>
+                <div class="projects">
+                    <h1 class="projects-topic"> [ P R O J E C T S ] </h1>
+                    <p class="projects-text"> Here are my projects! Some of them were created for school assignments, <br>while others are personal projects that I built out of curiosity and passion (more in GitHUb) </p>
+                    <div class="gallery-container">
+                        <h2> HTML & CSS <br>[ Individual Project ] </h2>
+                            <div class="gallery-item">
+                                <img src="img/Project-BetterWeb.jpg" alt="Project-BetterWeb">
+                                <a href="https://photsathon-karlsson.github.io/Better-web/" target="_blank">View more</a>
+                            </div>
+                        <h2> HTML & CSS <br>[ Group Project ] </h2>
+                            <div class="gallery-item">
+                                <img src="img/Project-Produktbolag.jpg" alt="Project-Produktbolag">
+                                <a href="https://felix-skorvald.github.io/majestic-rabbits/index.html" target="_blank">View more</a>
+                            </div>
+                        <h2> JavaScript <br>[ Individual Project ] </h2>
+                            <div class="gallery-item">
+                                <img src="img/Project-Foodtruck.jpg" alt="Project-Foodtruck">
+                                <a href="https://photsathon-karlsson.github.io/Foodtruck/" target="_blank">View more</a>
+                            </div>
+                        <h2> JavaScript <br>[ Group Project ] </h2>
+                            <div class="gallery-item">
+                                <img src="img/Project-HangmanGame.jpg" alt="Project-HangmanGame">
+                                <a href="https://ritahelwangi.github.io/Hangman/" target="_blank">View more</a>
+                            </div>
+                        <h2> UX / UI Design <br>[ Individual Project ] </h2>
+                            <div class="gallery-item">
+                                <img src="img/Project-CyberPetz.jpg" alt="Project-CyberPetz">
+                                <a href="https://www.figma.com/design/ADblgz5lvdBt5axYL9cHav/Inl%C3%A4mningsuppgift-UX---Cyber-Petz?node-id=1-168&t=ZgFmepC6Syv2cGjR-1" target="_blank">View more</a>
+                            </div>
+                        <h2> UX / UI Design <br>[ Group Project ] </h2>
+                            <div class="gallery-item">
+                                <img src="img/Project-TravelApp.jpg" alt="Project-TravelApp">
+                                <a href="https://www.figma.com/design/clSaNfammunaLAerbL0prP/Ninja-Kittens?node-id=0-1&p=f&t=JKiw9moyfawhIG4w-0" target="_blank">View more</a>
+                            </div>
+                        <h2> Project with Agile Methods <br>[ Group Project ] </h2>
+                            <div class="gallery-item">
+                                <img src="img/Project-MeetingApp.jpg" alt="Project-MeetingAp">
+                                <a href="https://www.figma.com/design/8KuBzddwnWVALAMK3YWuAl/Fire-Nerds-agila-metoder?node-id=0-1&p=f&t=RLIELFh4UTW46yHX-0" target="_blank">View more</a>
+                            </div>
+                    </div>
+                </div>
             `;
             break;
 
         case 'lifestyle':
             contentDiv.innerHTML = `
-                <h1>My Lifestyle</h1>
-                <p>I love learning and self-improvement, which keeps life exciting!</p>
+            <div class="lifestyle">
+                <div class="lifestyle-textbox">
+                    <h1 class="lifestyle-text">How I Spend My Free Time</h1>
+                    <ul>       
+                        <li> Taking photos </li> 
+                        <li> Drawing </li> 
+                        <li> Crafting </li> 
+                        <li> Crocheting </li> 
+                    </ul>
+                </div>
+                <div class="slider-container">
+                    <div class="slider">
+                        <div class="slide"><img src="img/lifestyle-1.jpg" alt="Image 1"></div>
+                        <div class="slide"><img src="img/lifestyle-2.png" alt="Image 2"></div>
+                        <div class="slide"><img src="img/lifestyle-3.png" alt="Image 3"></div>
+                        <div class="slide"><img src="img/lifestyle-4.jpg" alt="Image 4"></div>
+                        <div class="slide"><img src="img/lifestyle-5.jpg" alt="Image 5"></div>
+                        <div class="slide"><img src="img/lifestyle-6.jpg" alt="Image 6"></div>
+                        <div class="slide"><img src="img/lifestyle-7.jpg" alt="Image 7"></div>
+                        <div class="slide"><img src="img/lifestyle-8.jpg" alt="Image 8"></div>
+                        <div class="slide"><img src="img/lifestyle-9.jpg" alt="Image 9"></div>
+                    </div>
+                    <button class="prev">&#10094;</button>
+                    <button class="next">&#10095;</button>
+                </div>
+            </div>
             `;
+            setTimeout(updateSlider, 100); // ให้เวลาโหลด DOM ก่อน
             break;
 
         default:
